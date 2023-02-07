@@ -95,51 +95,6 @@ $banner = $vang."
 @system('clear');
 for($i = 0; $i < strlen($banner); $i++){echo $banner[$i];usleep(500);}
 $d = date("d-m");
-$_check = file_exists("keyLHTOOL$d.txt");
-echo $hien.$luc."Lấy Key Tại: $vang".$result["shortenedUrl"]." \n";
-echo $hien."\033[1;31m[\033[1;33mTHÔNG BÁO\033[1;31m]\033[1;37m Đây Là Tool Free. Key Tool Phải Lấy Lại Mỗi Ngày Nhé \n";
-if ($_check !='1'){
-$gh = date("d-m", strtotime("yesterday"));
-$yt = "keyLHTOOL$gh.txt";
-$_check2 = file_exists("$yt");
-if($_check2==1){
-  unlink("$yt");
-}
-for($j = 5;$j> 0;$j--){
-  echo $xnhac."Chuyển Hướng Đến Trang Lấy Key Sau $vang".$j;
-  sleep(1);
-  echo "\r";
-  echo "                                          \r";
-}
-system("termux-open-url ".$result["shortenedUrl"]."");
-
-echo $hien."\033[1;33m[\033[1;31mWARNING\033[1;33m] \033[1;32mNhập Key Đã Lấy: $vang";
-    $keyy = trim(fgets(STDIN));
-    }
-if ($_check =='1'){
-  $keyy = file_get_contents("keyLHTOOL$d.txt");
-  $vt = 1;
-  echo $xnhac."Đang Lấy Key...";
-  sleep(2);
-  echo "\r                                         \r";
-}
-if($keyy == ''){
-  echo $do."Key Sai Rồi, Vào Link Phía Trên Để Lấy Key\n";
-  exit;
-}
-  if($keyy == $key)
-      {
-             echo $trang."Key Đúng\n";
-             $mf = fopen("keyLHTOOL$d.txt", "w");
-             fwrite($mf, $keyy);
-             fclose($mf);
-             sleep(3);
-      }
-      else
-      {
-           echo $do."Key Sai Rồi, Vào Link Phía Trên Để Lấy Key\n";
-           exit;
-      }
 @system('clear'); 
 for($i = 0; $i < strlen($banner); $i++){echo $banner[$i];usleep(5000);}
 for($i = 0; $i < strlen($c1); $i++){echo $c1[$i];usleep(5000);}
