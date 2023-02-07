@@ -90,11 +90,6 @@ $banner = $vang."
 \033[1;31mIP Của Bạn: \033[1;37m$ip_2
 \033[1;37m- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -                                    
                                                                     \n";
-
-
-@system('clear');
-for($i = 0; $i < strlen($banner); $i++){echo $banner[$i];usleep(500);}
-$d = date("d-m");
 @system('clear'); 
 for($i = 0; $i < strlen($banner); $i++){echo $banner[$i];usleep(5000);}
 for($i = 0; $i < strlen($c1); $i++){echo $c1[$i];usleep(5000);}
